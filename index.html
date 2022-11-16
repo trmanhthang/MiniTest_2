@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Test</title>
+</head>
+<body>
+    <!-- Bài 2 -->
+    <h5>Bài 2</h5>
+    <input id="num" type="text">
+    <input type="button" value="Check" onclick="check()">
+    <p id="result"></p>
+    
+</body>
+<script>
+    //Bài 1
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+    let a = 0;
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] % 2 == 0) {
+            a++;
+        }
+    }
+    alert("có" + " " + a + " " + "phần tử là số chẵn")
+    
+    // Bài 2
+    function check() {
+        let number = document.getElementById('num').value;
+        let array = [7, 8, 9, 9, 20, 10, 8, 2];
+        let quality = 0;
+        for(let i = 0; i < array.length; i++) {
+            if(number == array[i]){
+                quality++;
+            }
+        }
+        document.getElementById('result').innerHTML = "Có" + " " + quality + " " + "phần tử giống"
+    }
+
+    // Bài 3
+    let Arr = [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13];
+    let total = 0; 
+    for (let i = 0; i < Arr.length; i++) {
+        let count = 0; 
+        for (let j = 2; j < Arr[i] - 1; j++) {
+            if (Arr[i] % j == 0 && Arr[i] > 1) {
+                count += 1;
+                if (count == 2) {
+                total += Arr[i];
+                }
+            }
+            
+        }
+    }
+    alert('Tổng các số nguyên tố trong mảng là: ' + total)
+            
+        
+</script>
+</html>
